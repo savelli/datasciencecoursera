@@ -14,7 +14,7 @@ merged_dataset <- rbind(xtest, xtrain)
 # STEP 2 : Extract only the measurements on the mean and                #
 #          standard deviation for each measurement                      #
 #########################################################################
-# the extracted features are those wich contain the pattern "word" or "std"
+# the extracted features are those wich contain the pattern "mean" or "std"
 # parse the features file
 feat <- read.csv("features.txt", sep="",header = FALSE)
 # select the indexes to keep (features that contain mean or std in their label)

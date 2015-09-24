@@ -1,4 +1,4 @@
-The script performs the following steps:
+The run_analysis.R script performs the following steps:
 
  **1. Merge the training and the test sets to create one data set**
 The test and train files (X_test.txt and X_train.txt) are opened and stored in data frames. The 2 dataframes are then merged into 1 single data frames (called merged_dataset) by concatenating the rows.
@@ -16,3 +16,6 @@ Column labels are renamed so that the first column label is "activity", and the 
  **5.  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.** 
  The subject files are opened and added as the 1st column of the dataset. Then, the dplyr module is used to group the rows by subect and activity, and to perform the mean() on the features columns.
 This results in a 180 lines data set (6 activity x 30 subjects), called res.
+
+Note that the input data files shall be located in the same directory as the run_analysis.R scrit.
+This includes the following files: X_test.txt, X_train.txt, features.txt, y_test.txt, y_train.txt, activity_labels.txt, subject_test.txt, subject_train.txt
